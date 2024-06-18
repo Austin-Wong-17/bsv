@@ -3,8 +3,8 @@
 var chai = require('chai')
 var should = chai.should()
 var expect = chai.expect
-var bsv = require('..')
-var Opcode = bsv.Opcode
+var tbc = require('..')
+var Opcode = tbc.Opcode
 
 describe('Opcode', function () {
   it('should create a new Opcode', function () {

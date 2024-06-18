@@ -1,11 +1,11 @@
 'use strict'
 
-var bsv = require('../..')
+var tbc = require('../..')
 var should = require('chai').should()
 var expect = require('chai').expect
-var BufferWriter = bsv.encoding.BufferWriter
-var BufferReader = bsv.encoding.BufferReader
-var BN = bsv.crypto.BN
+var BufferWriter = tbc.encoding.BufferWriter
+var BufferReader = tbc.encoding.BufferReader
+var BN = tbc.crypto.BN
 
 describe('BufferWriter', function () {
   it('should create a new buffer writer', function () {

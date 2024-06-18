@@ -3,15 +3,15 @@
 var assert = require('assert')
 require('chai').should()
 var expect = require('chai').expect
-var bsv = require('..')
+var tbc = require('..')
 var buffer = require('buffer')
-var errors = bsv.errors
-var hdErrors = bsv.errors.HDPublicKey
+var errors = tbc.errors
+var hdErrors = tbc.errors.HDPublicKey
 var JSUtil = require('../lib/util/js')
-var HDPrivateKey = bsv.HDPrivateKey
-var HDPublicKey = bsv.HDPublicKey
-var Base58Check = bsv.encoding.Base58Check
-var Networks = bsv.Networks
+var HDPrivateKey = tbc.HDPrivateKey
+var HDPublicKey = tbc.HDPublicKey
+var Base58Check = tbc.encoding.Base58Check
+var Networks = tbc.Networks
 
 var xprivkey = 'xprv9s21ZrQH143K3QTDL4LXw2F7HEK3wJUD2nW2nRk4stbPy6cq3jPPqjiChkVvvNKmPGJxWUtg6LnF5kejMRNNU3TGtRBeJgk33yuGBxrMPHi'
 var xpubkey = 'xpub661MyMwAqRbcFtXgS5sYJABqqG9YLmC4Q1Rdap9gSE8NqtwybGhePY2gZ29ESFjqJoCu1Rupje8YtGqsefD265TMg7usUDFdp6W1EGMcet8'

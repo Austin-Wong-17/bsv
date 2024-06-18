@@ -1,7 +1,7 @@
-let bsv = require('./')
-let Transaction = bsv.Transaction
-let Random = bsv.crypto.Random
-let Script = bsv.Script
+let tbc = require('./')
+let Transaction = tbc.Transaction
+let Random = tbc.crypto.Random
+let Script = tbc.Script
 
 var fromAddress = 'mszYqVnqKoQx4jcTdJXxwKAissE3Jbrrc1'
 var toAddress = 'mrU9pEmAx26HcbKVrABvgL7AwA5fjNFoDc'

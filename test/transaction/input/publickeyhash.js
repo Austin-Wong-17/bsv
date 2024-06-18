@@ -2,12 +2,12 @@
 
 require('chai').should()
 
-var bsv = require('../../..')
-var Transaction = bsv.Transaction
-var PrivateKey = bsv.PrivateKey
-var Address = bsv.Address
-var Script = bsv.Script
-var Networks = bsv.Networks
+var tbc = require('../../..')
+var Transaction = tbc.Transaction
+var PrivateKey = tbc.PrivateKey
+var Address = tbc.Address
+var Script = tbc.Script
+var Networks = tbc.Networks
 
 describe('PublicKeyHashInput', function () {
   var privateKey = new PrivateKey('KwF9LjRraetZuEjR8VqEq539z137LW5anYDUnVK11vM3mNMHTWb4')

@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-tar -cvf bsv.tar lib index.d.ts
+tar -cvf tbc.tar lib index.d.ts

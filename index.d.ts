@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
-// Type definitions for bsv 1.5.6
-// Project: https://github.com/moneybutton/bsv
+// Type definitions for tbc 1.5.6
+// Project: https://github.com/TuringBitChain/tbc-lib-js
 // Forked From: https://github.com/bitpay/bitcore-lib
 // Definitions by: Lautaro Dragan <https://github.com/lautarodragan>
 // Definitions extended by: David Case <https://github.com/shruggr>
@@ -10,7 +10,7 @@
 
 /// <reference types="node" />
 
-declare module 'bsv' {
+declare module 'tbc' {
     /**
      * Opcode class, representing opcodes used in Bitcoin Script
      * @constructor

@@ -3,12 +3,12 @@
 var should = require('chai').should()
 var expect = require('chai').expect
 
-var bsv = require('../../..')
-var PrivateKey = bsv.PrivateKey
-var Address = bsv.Address
-var Script = bsv.Script
-var Networks = bsv.Networks
-var Input = bsv.Transaction.Input
+var tbc = require('../../..')
+var PrivateKey = tbc.PrivateKey
+var Address = tbc.Address
+var Script = tbc.Script
+var Networks = tbc.Networks
+var Input = tbc.Transaction.Input
 
 describe('Transaction.Input', function () {
   var privateKey = new PrivateKey('KwF9LjRraetZuEjR8VqEq539z137LW5anYDUnVK11vM3mNMHTWb4')

@@ -3,13 +3,13 @@
 require('chai').should()
 var _ = require('../../../lib/util/_')
 
-var bsv = require('../../..')
-var Transaction = bsv.Transaction
-var PrivateKey = bsv.PrivateKey
-var Address = bsv.Address
-var Script = bsv.Script
-var Signature = bsv.crypto.Signature
-var MultiSigScriptHashInput = bsv.Transaction.Input.MultiSigScriptHash
+var tbc = require('../../..')
+var Transaction = tbc.Transaction
+var PrivateKey = tbc.PrivateKey
+var Address = tbc.Address
+var Script = tbc.Script
+var Signature = tbc.crypto.Signature
+var MultiSigScriptHashInput = tbc.Transaction.Input.MultiSigScriptHash
 
 describe('MultiSigScriptHashInput', function () {
   var privateKey1 = new PrivateKey('KwF9LjRraetZuEjR8VqEq539z137LW5anYDUnVK11vM3mNMHTWb4')

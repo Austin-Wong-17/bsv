@@ -2,11 +2,11 @@
 
 var _ = require('../../lib/util/_')
 var should = require('chai').should()
-var bsv = require('../..')
-var BN = bsv.crypto.BN
-var Signature = bsv.crypto.Signature
-var JSUtil = bsv.util.js
-var Interpreter = bsv.Script.Interpreter
+var tbc = require('../..')
+var BN = tbc.crypto.BN
+var Signature = tbc.crypto.Signature
+var JSUtil = tbc.util.js
+var Interpreter = tbc.Script.Interpreter
 
 var sigCanonical = require('../data/bitcoind/sig_canonical')
 var sigNonCanonical = require('../data/bitcoind/sig_noncanonical')

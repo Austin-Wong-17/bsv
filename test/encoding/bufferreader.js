@@ -1,10 +1,10 @@
 'use strict'
 
 var should = require('chai').should()
-var bsv = require('../..')
-var BufferWriter = bsv.encoding.BufferWriter
-var BufferReader = bsv.encoding.BufferReader
-var BN = bsv.crypto.BN
+var tbc = require('../..')
+var BufferWriter = tbc.encoding.BufferWriter
+var BufferReader = tbc.encoding.BufferReader
+var BN = tbc.crypto.BN
 
 describe('BufferReader', function () {
   it('should make a new BufferReader', function () {
@@ -168,7 +168,7 @@ describe('BufferReader', function () {
       br.readUInt64LEBN().toNumber().should.equal(1)
     })
 
-    it('should return 10 BSV', function () {
+    it('should return 10 TBC', function () {
       var tenbsv = 10 * 1e8
       var tenbsvBuffer = Buffer.from('00ca9a3b00000000', 'hex')
       var br = new BufferReader(tenbsvBuffer)

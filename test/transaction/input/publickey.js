@@ -1,8 +1,8 @@
 'use strict'
 
-var bsv = require('../../..')
-var Transaction = bsv.Transaction
-var PrivateKey = bsv.PrivateKey
+var tbc = require('../../..')
+var Transaction = tbc.Transaction
+var PrivateKey = tbc.PrivateKey
 
 describe('PublicKeyInput', function () {
   var utxo = {

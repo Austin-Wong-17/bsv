@@ -2,13 +2,13 @@
 
 var should = require('chai').should()
 var expect = require('chai').expect
-var bsv = require('../..')
+var tbc = require('../..')
 
-var Script = bsv.Script
-var Networks = bsv.Networks
-var Opcode = bsv.Opcode
-var PublicKey = bsv.PublicKey
-var Address = bsv.Address
+var Script = tbc.Script
+var Networks = tbc.Networks
+var Opcode = tbc.Opcode
+var PublicKey = tbc.PublicKey
+var Address = tbc.Address
 
 describe('Script', function () {
   it('should make a new script', function () {
@@ -423,7 +423,7 @@ describe('Script', function () {
       // from txid: 5c85ed63469aa9971b5d01063dbb8bcdafd412b2f51a3d24abf2e310c028bbf8
       // and input index: 5
       var scriptBuffer = Buffer.from('483045022050eb59c79435c051f45003d9f82865c8e4df5699d7722e77113ef8cadbd92109022100d4ab233e070070eb8e0e62e3d2d2eb9474a5bf135c9eda32755acb0875a6c20601', 'hex')
-      var script = bsv.Script.fromBuffer(scriptBuffer)
+      var script = tbc.Script.fromBuffer(scriptBuffer)
       script.isPublicKeyIn().should.equal(true)
     })
   })
@@ -1238,7 +1238,7 @@ describe('Script', function () {
     })
     it('should handle P2SH-multisig-in scripts from utility', function () {
       // create a well-formed signature, does not need to match pubkeys
-      var signature = bsv.crypto.Signature.fromString('30060201FF0201FF')
+      var signature = tbc.crypto.Signature.fromString('30060201FF0201FF')
       var signatures = [ signature.toBuffer() ]
       var p2sh = Script.buildP2SHMultisigIn(pubKeyHexes, 1, signatures, {})
       p2sh.getSignatureOperationsCount(true).should.equal(0)

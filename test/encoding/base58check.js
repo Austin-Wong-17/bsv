@@ -1,9 +1,9 @@
 'use strict'
 
 var should = require('chai').should()
-var bsv = require('../..')
-var Base58Check = bsv.encoding.Base58Check
-var Base58 = bsv.encoding.Base58
+var tbc = require('../..')
+var Base58Check = tbc.encoding.Base58Check
+var Base58 = tbc.encoding.Base58
 
 describe('Base58Check', function () {
   var buf = Buffer.from([0, 1, 2, 3, 253, 254, 255])

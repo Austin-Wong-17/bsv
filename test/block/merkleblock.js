@@ -2,11 +2,11 @@
 
 var should = require('chai').should()
 
-var bsv = require('../..')
-var MerkleBlock = bsv.MerkleBlock
-var BufferReader = bsv.encoding.BufferReader
-var BufferWriter = bsv.encoding.BufferWriter
-var Transaction = bsv.Transaction
+var tbc = require('../..')
+var MerkleBlock = tbc.MerkleBlock
+var BufferReader = tbc.encoding.BufferReader
+var BufferWriter = tbc.encoding.BufferWriter
+var Transaction = tbc.Transaction
 var data = require('../data/merkleblocks.js')
 var transactionVector = require('../data/tx_creation')
 

@@ -4,8 +4,8 @@ var chai = require('chai')
 var expect = chai.expect
 var cloneDeep = require('clone-deep')
 
-var bsv = require('../..')
-var UnspentOutput = bsv.Transaction.UnspentOutput
+var tbc = require('../..')
+var UnspentOutput = tbc.Transaction.UnspentOutput
 
 describe('UnspentOutput', function () {
   var sampleData1 = {

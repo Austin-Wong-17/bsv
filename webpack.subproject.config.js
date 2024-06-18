@@ -1,6 +1,6 @@
 module.exports = {
   externals: {
-    '../../': 'bsv'
+    '../../': 'tbc'
   },
   mode: 'production'
 }

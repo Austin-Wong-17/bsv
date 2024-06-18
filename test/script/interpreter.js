@@ -1,14 +1,14 @@
 'use strict'
 
 var should = require('chai').should()
-var bsv = require('../..')
-var Interpreter = bsv.Script.Interpreter
-var Transaction = bsv.Transaction
-var PrivateKey = bsv.PrivateKey
-var Script = bsv.Script
-var BN = bsv.crypto.BN
-var BufferWriter = bsv.encoding.BufferWriter
-var Opcode = bsv.Opcode
+var tbc = require('../..')
+var Interpreter = tbc.Script.Interpreter
+var Transaction = tbc.Transaction
+var PrivateKey = tbc.PrivateKey
+var Script = tbc.Script
+var BN = tbc.crypto.BN
+var BufferWriter = tbc.encoding.BufferWriter
+var Opcode = tbc.Opcode
 var _ = require('../../lib/util/_')
 
 var scriptTests = require('../data/bitcoind/script_tests')

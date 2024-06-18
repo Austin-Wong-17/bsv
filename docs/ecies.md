@@ -1,5 +1,5 @@
 # ECIES
-`bsv/ecies` is a library that work with bsv's private/public keys. 
+`tbc/ecies` is a library that work with tbc's private/public keys. 
 
 It provide electrum compatible ECIES message by default.
 
@@ -15,10 +15,10 @@ The constructor accept several options
 ### Message to Bob
 
 ```javascript
-var bsv = require('bsv')
-var IES = require('bsv/ecies')
+var tbc = require('tbc')
+var IES = require('tbc/ecies')
 
-var bob = bsv.PrivateKey()
+var bob = tbc.PrivateKey()
 var bobPubkey = bob.publicKey
 
 // Send a message to bob
@@ -30,12 +30,12 @@ var dec = new IES().privateKey(bob).decrypt(enc)
 ### Messages between Alice and Bob
 
 ~~~javascript
-var bsv = require('bsv')
-var IES = require('bsv/ecies')
+var tbc = require('tbc')
+var IES = require('tbc/ecies')
 
-var alice = bsv.PrivateKey()
+var alice = tbc.PrivateKey()
 var alicePubkey = alice.publicKey
-var bob = bsv.PrivateKey()
+var bob = tbc.PrivateKey()
 var bobPubkey = bob.publicKey
 
 var iesAlice = new IES({'nokey':true}).privateKey(alice).publicKey(bobPubkey)
@@ -54,12 +54,12 @@ messageBobDec = iesAlice.decrypt(messageBob)
 Sender can recover messages if `ephemeralKey` is `false`.
 
 ~~~javascript
-var bsv = require('bsv')
-var IES = require('bsv/ecies')
+var tbc = require('tbc')
+var IES = require('tbc/ecies')
 
-var alice = bsv.PrivateKey()
+var alice = tbc.PrivateKey()
 var alicePubkey = alice.publicKey
-var bob = bsv.PrivateKey()
+var bob = tbc.PrivateKey()
 var bobPubkey = bob.publicKey
 
 var iesAlice = new IES({'nokey':true}).privateKey(alice).publicKey(bobPubkey)
@@ -75,12 +75,12 @@ messageAliceRecover = iesAlice.decrypt(messageAlice)
 Sometimes you may want to extract ECDH key for other use.
 
 ~~~javascript
-var bsv = require('bsv')
-var IES = require('bsv/ecies')
+var tbc = require('tbc')
+var IES = require('tbc/ecies')
 
-var alice = bsv.PrivateKey()
+var alice = tbc.PrivateKey()
 var alicePubkey = alice.publicKey
-var bob = bsv.PrivateKey()
+var bob = tbc.PrivateKey()
 var bobPubkey = bob.publicKey
 
 var iesAlice = new IES().privateKey(alice).publicKey(bobPubkey)
@@ -96,7 +96,7 @@ var sharedSecret = iesBob.ivkEkM
 Sometimes you may want to use bitcore sytle ECIES.
 
 ~~~javascript
-var bsv = require('bsv')
-var IES = require('bsv/ecies').bitcoreECIES
+var tbc = require('tbc')
+var IES = require('tbc/ecies').bitcoreECIES
 ~~~
 

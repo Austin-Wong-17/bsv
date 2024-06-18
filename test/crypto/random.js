@@ -1,7 +1,7 @@
 'use strict'
 
-var bsv = require('../..')
-var Random = bsv.crypto.Random
+var tbc = require('../..')
+var Random = tbc.crypto.Random
 
 describe('Random', function () {
   describe('@getRandomBuffer', function () {

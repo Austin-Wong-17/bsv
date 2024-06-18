@@ -3,8 +3,8 @@
 var ECIES = require('../../lib/ecies/electrum-ecies')
 
 var should = require('chai').should()
-var bsv = require('../../')
-var PrivateKey = bsv.PrivateKey
+var tbc = require('../../')
+var PrivateKey = tbc.PrivateKey
 
 var aliceKey = new PrivateKey('L1Ejc5dAigm5XrM3mNptMEsNnHzS7s51YxU7J61ewGshZTKkbmzJ')
 var bobKey = new PrivateKey('KxfxrUXSMjJQcb3JgnaaA6MqsrKQ1nBSxvhuigdKRyFiEm6BZDgG')
@@ -27,7 +27,7 @@ describe('ECIES', function () {
   it('use ephemeral privateKey if privateKey is not set', function () {
     var ecies = ECIES()
     var ephemeralKey = ecies._privateKey;
-    (ephemeralKey instanceof bsv.PrivateKey).should.equal(true)
+    (ephemeralKey instanceof tbc.PrivateKey).should.equal(true)
   })
 
   it('chainable function', function () {
@@ -153,7 +153,7 @@ describe('ECIES', function () {
   })
 
   it('errors', function () {
-    should.exist(bsv.errors.ECIES)
+    should.exist(tbc.errors.ECIES)
   })
 
   it('correctly fails if trying to decrypt a bad message', function () {
@@ -168,12 +168,12 @@ describe('ECIES', function () {
     var secret = 'test'
 
     // test uncompressed
-    var alicePrivateKey = bsv.PrivateKey.fromObject({
+    var alicePrivateKey = tbc.PrivateKey.fromObject({
       bn: '1fa76f9c799ca3a51e2c7c901d3ba8e24f6d870beccf8df56faf30120b38f360',
       compressed: false,
       network: 'livenet'
     })
-    var alicePublicKey = bsv.PublicKey.fromPrivateKey(alicePrivateKey) // alicePrivateKey.publicKey
+    var alicePublicKey = tbc.PublicKey.fromPrivateKey(alicePrivateKey) // alicePrivateKey.publicKey
     alicePrivateKey.compressed.should.equal(false)
 
     var cypher1 = ECIES().privateKey(alicePrivateKey).publicKey(alicePublicKey)
@@ -188,12 +188,12 @@ describe('ECIES', function () {
     var secret = 'test'
 
     // test compressed
-    var alicePrivateKey = bsv.PrivateKey.fromObject({
+    var alicePrivateKey = tbc.PrivateKey.fromObject({
       bn: '1fa76f9c799ca3a51e2c7c901d3ba8e24f6d870beccf8df56faf30120b38f360',
       compressed: true,
       network: 'livenet'
     })
-    var alicePublicKey = bsv.PublicKey.fromPrivateKey(alicePrivateKey) // alicePrivateKey.publicKey
+    var alicePublicKey = tbc.PublicKey.fromPrivateKey(alicePrivateKey) // alicePrivateKey.publicKey
     alicePrivateKey.compressed.should.equal(true)
 
     var cypher1 = ECIES().privateKey(alicePrivateKey).publicKey(alicePublicKey)

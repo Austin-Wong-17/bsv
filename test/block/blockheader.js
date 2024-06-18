@@ -1,11 +1,11 @@
 'use strict'
 
-var bsv = require('../..')
+var tbc = require('../..')
 var BN = require('../../lib/crypto/bn')
-var BufferReader = bsv.encoding.BufferReader
-var BufferWriter = bsv.encoding.BufferWriter
+var BufferReader = tbc.encoding.BufferReader
+var BufferWriter = tbc.encoding.BufferWriter
 
-var BlockHeader = bsv.BlockHeader
+var BlockHeader = tbc.BlockHeader
 var fs = require('fs')
 var should = require('chai').should()
 

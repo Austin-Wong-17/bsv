@@ -1,9 +1,9 @@
 'use strict'
 
 var should = require('chai').should()
-var bsv = require('../..')
-var Point = bsv.crypto.Point
-var BN = bsv.crypto.BN
+var tbc = require('../..')
+var Point = tbc.crypto.Point
+var BN = tbc.crypto.BN
 
 describe('Point', function () {
   var valid = {

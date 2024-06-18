@@ -2,8 +2,8 @@
 
 require('chai').should()
 
-var bsv = require('../..')
-var JSUtil = bsv.util.js
+var tbc = require('../..')
+var JSUtil = tbc.util.js
 
 describe('js utils', function () {
   describe('isValidJSON', function () {

@@ -4,12 +4,12 @@ var chai = require('chai')
 var should = chai.should()
 var expect = chai.expect
 
-var bsv = require('..')
-var PublicKey = bsv.PublicKey
-var PrivateKey = bsv.PrivateKey
-var Address = bsv.Address
-var Script = bsv.Script
-var Networks = bsv.Networks
+var tbc = require('..')
+var PublicKey = tbc.PublicKey
+var PrivateKey = tbc.PrivateKey
+var Address = tbc.Address
+var Script = tbc.Script
+var Networks = tbc.Networks
 
 var validbase58 = require('./data/bitcoind/base58_keys_valid.json')
 var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json')
@@ -287,7 +287,7 @@ describe('Address', function () {
     it('should error because of unrecognized data format', function () {
       (function () {
         return new Address(new Error())
-      }).should.throw(bsv.errors.InvalidArgument)
+      }).should.throw(tbc.errors.InvalidArgument)
     })
 
     it('should error because of incorrect format for pubkey hash', function () {
@@ -492,7 +492,7 @@ describe('Address', function () {
     it('will fail with invalid state', function () {
       expect(function () {
         return Address.fromObject('¹')
-      }).to.throw(bsv.errors.InvalidState)
+      }).to.throw(tbc.errors.InvalidState)
     })
   })
 

@@ -2,10 +2,10 @@
 
 var should = require('chai').should()
 
-var bsv = require('../..')
-var errors = bsv.errors
-var $ = bsv.util.preconditions
-var PrivateKey = bsv.PrivateKey
+var tbc = require('../..')
+var errors = tbc.errors
+var $ = tbc.util.preconditions
+var PrivateKey = tbc.PrivateKey
 
 describe('preconditions', function () {
   it('can be used to assert state', function () {

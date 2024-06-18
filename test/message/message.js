@@ -4,16 +4,16 @@ var chai = require('chai')
 var expect = chai.expect
 var should = chai.should()
 
-var bsv = require('../../')
-var Address = bsv.Address
-var Signature = bsv.crypto.Signature
-var PrivateKey = bsv.PrivateKey
+var tbc = require('../../')
+var Address = tbc.Address
+var Signature = tbc.crypto.Signature
+var PrivateKey = tbc.PrivateKey
 var Message = require('../../lib/message')
 
 describe('Message', function () {
   var address = 'n1ZCYg9YXtB5XCZazLxSmPDa8iwJRZHhGx'
   var badAddress = 'mmRcrB5fTwgxaFJmVLNtaG8SV454y1E3kC'
-  var privateKey = bsv.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4')
+  var privateKey = tbc.PrivateKey.fromWIF('cPBn5A4ikZvBTQ8D7NnvHZYCAxzDZ5Z2TSGW2LkyPiLxqYaJPBW4')
   var text = 'hello, world'
   var textBuffer = Buffer.from('hello, world')
   var bufferData = Buffer.from('H/DIn8uA1scAuKLlCx+/9LnAcJtwQQ0PmcPrJUq90aboLv3fH5fFvY+vmbfOSFEtGarznYli6ShPr9RXwY9UrIY=', 'base64')
@@ -123,7 +123,7 @@ describe('Message', function () {
   })
 
   it('will verify with an uncompressed pubkey', function () {
-    var privateKey = new bsv.PrivateKey('5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss')
+    var privateKey = new tbc.PrivateKey('5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss')
     var message = new Message('This is an example of a signed message.')
     var signature = message.sign(privateKey)
     var verified = message.verify(privateKey.toAddress(), signature)

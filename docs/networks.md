@@ -9,14 +9,14 @@ The regtest network is useful for development as it's possible to programmatical
 
 ```javascript
 // Standard testnet
-> bsv.Networks.testnet.networkMagic;
+> tbc.Networks.testnet.networkMagic;
 <Buffer 0b 11 09 07>
 ```
 
 ```javascript
 // Enabling testnet to use the regtest port and magicNumber
-> bsv.Networks.enableRegtest();
-> bsv.Networks.testnet.networkMagic;
+> tbc.Networks.enableRegtest();
+> tbc.Networks.testnet.networkMagic;
 <Buffer fa bf b5 da>
 ```
 

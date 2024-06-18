@@ -2,8 +2,8 @@
 
 var expect = require('chai').expect
 var should = require('chai').should()
-var bsv = require('..')
-var networks = bsv.Networks
+var tbc = require('..')
+var networks = tbc.Networks
 
 describe('Networks', function () {
   var customnet

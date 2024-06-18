@@ -3,13 +3,13 @@
 var should = require('chai').should()
 var expect = require('chai').expect
 
-var bsv = require('..')
-var Point = bsv.crypto.Point
-var BN = bsv.crypto.BN
-var PublicKey = bsv.PublicKey
-var PrivateKey = bsv.PrivateKey
-var Address = bsv.Address
-var Networks = bsv.Networks
+var tbc = require('..')
+var Point = tbc.crypto.Point
+var BN = tbc.crypto.BN
+var PublicKey = tbc.PublicKey
+var PrivateKey = tbc.PrivateKey
+var Address = tbc.Address
+var Networks = tbc.Networks
 
 describe('PublicKey', function () {
   var invalidPoint = '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'

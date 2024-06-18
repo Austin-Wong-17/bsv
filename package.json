@@ -1,7 +1,7 @@
 {
-  "name": "bsv",
+  "name": "tbc",
   "version": "1.5.6",
-  "description": "A pure and powerful JavaScript Bitcoin SV (BSV) library.",
+  "description": "A pure and powerful JavaScript Turing BC (TBC) library.",
   "author": "Ryan X. Charles <ryan@moneybutton.com>",
   "ide": true,
   "main": "index.js",
@@ -10,14 +10,14 @@
     "dev": "mocha -g 'Address' ",
     "test": "standard && mocha",
     "coverage": "nyc --reporter=text npm run test",
-    "build-bsv": "webpack index.js --config webpack.config.js",
-    "build-ecies": "webpack ecies/index.js --config webpack.subproject.config.js --output-library bsvEcies -o bsv-ecies.min.js",
-    "build-message": "webpack message/index.js --config webpack.subproject.config.js --output-library bsvMessage -o bsv-message.min.js",
-    "build-mnemonic": "webpack mnemonic/index.js --config webpack.subproject.config.js --output-library bsvMnemonic -o bsv-mnemonic.min.js",
-    "build": "yarn build-bsv && yarn build-ecies && yarn build-message && yarn build-mnemonic",
+    "build-tbc": "webpack index.js --config webpack.config.js",
+    "build-ecies": "webpack ecies/index.js --config webpack.subproject.config.js --output-library bsvEcies -o tbc-ecies.min.js",
+    "build-message": "webpack message/index.js --config webpack.subproject.config.js --output-library bsvMessage -o tbc-message.min.js",
+    "build-mnemonic": "webpack mnemonic/index.js --config webpack.subproject.config.js --output-library bsvMnemonic -o tbc-mnemonic.min.js",
+    "build": "yarn build-tbc && yarn build-ecies && yarn build-message && yarn build-mnemonic",
     "prepublishOnly": "yarn build"
   },
-  "unpkg": "bsv.min.js",
+  "unpkg": "tbc.min.js",
   "keywords": [
     "bitcoin",
     "transaction",
@@ -36,7 +36,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/moneybutton/bsv"
+    "url": "https://github.com/TuringBitChain/tbc-lib-js"
   },
   "browser": {
     "request": "browser-request"

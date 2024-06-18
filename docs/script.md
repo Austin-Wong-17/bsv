@@ -51,7 +51,7 @@ assert(script.toString() === 'OP_2 33 0x022df8750480ad5b26950b25c7ba79d3e37d75f6
 
 ### Pay to Script Hash (p2sh)
 
-DEPRECATED - Do not use p2sh on Bitcoin SV.
+DEPRECATED - Do not use p2sh on Turing BC.
 
 Pay to script hash outputs are scripts that contain the hash of another script, called `redeemScript`. To spend bitcoins sent in a p2sh output, the spending transaction must provide a script matching the script hash and data which makes the script evaluate to true.  This allows to defer revealing the spending conditions to the moment of spending. It also makes it possible for the receiver to set the conditions to spend those bitcoins.
 
@@ -106,7 +106,7 @@ s.isMultisigOut() // true
 ```
 
 ## Script Interpreting and Validation
-To validate a transaction, the bitcoin network validates all of its inputs and outputs. To validate an input, the input's script is concatenated with the referenced output script, and the result is executed. If at the end of execution the stack contains a 'true' value, then the transaction is valid. You can do this in `bsv` by using the `Interpreter` class. The entry point (and probably the only interface you'll need for most applications) is the method `Interpreter#verify()`.
+To validate a transaction, the bitcoin network validates all of its inputs and outputs. To validate an input, the input's script is concatenated with the referenced output script, and the result is executed. If at the end of execution the stack contains a 'true' value, then the transaction is valid. You can do this in `tbc` by using the `Interpreter` class. The entry point (and probably the only interface you'll need for most applications) is the method `Interpreter#verify()`.
 
 You can use it like this:
 

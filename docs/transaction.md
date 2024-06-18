@@ -3,7 +3,7 @@ Bitcore provides a very simple API for creating transactions. We expect this API
 
 A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction's output, and a signature that allows the value referenced in that output to be used in this transaction.
 
-Note also that an output can be used only once. That's why there's a concept of "change address" in the bitcoin ecosystem: if an output of 10 BSV is available for me to spend, but I only need to transmit 1 BSV, I'll create a transaction with two outputs, one with 1 BSV that I want to spend, and the other with 9 BSV to a change address, so I can spend this 9 BSV with another private key that I own.
+Note also that an output can be used only once. That's why there's a concept of "change address" in the bitcoin ecosystem: if an output of 10 TBC is available for me to spend, but I only need to transmit 1 TBC, I'll create a transaction with two outputs, one with 1 TBC that I want to spend, and the other with 9 TBC to a change address, so I can spend this 9 TBC with another private key that I own.
 
 So, in order to transmit a valid transaction, you must know what other transactions on the network store outputs that have not been spent and that are available for you to spend (meaning that you have the set of keys that can validate you own those funds). The unspent outputs are usually referred to as "utxo"s.
 
@@ -29,7 +29,7 @@ You can also override the fee estimation with another amount, specified in satos
 
 ```javascript
 var transaction = new Transaction().fee(546); // Minimum non-dust amount
-var transaction = new Transaction().fee(1e8);  // Generous fee of 1 BSV
+var transaction = new Transaction().fee(1e8);  // Generous fee of 1 TBC
 ```
 
 ## Multisig Transactions
@@ -136,14 +136,14 @@ There are a series of methods used for serialization:
 - `toBufferWriter`: Uses an already existing BufferWriter to copy over the serialized transaction
 
 ## Serialization Checks
-When serializing, the bsv library performs a series of checks. These can be disabled by providing an object to the `serialize` method with the checks that you'll like to skip.
+When serializing, the tbc library performs a series of checks. These can be disabled by providing an object to the `serialize` method with the checks that you'll like to skip.
 - `disableLargeFees` avoids checking that the fee is no more than `Transaction.FEE_PER_KB * Transaction.FEE_SECURITY_MARGIN * size_in_kb`.
 - `disableSmallFees` avoids checking that the fee is less than `Transaction.FEE_PER_KB * size_in_kb / Transaction.FEE_SECURITY_MARGIN`.
 - `disableIsFullySigned` does not check if all inputs are fully signed
 - `disableDustOutputs` does not check for dust outputs being generated
 - `disableMoreOutputThanInput` avoids checking that the sum of the output amounts is less than or equal to the sum of the amounts for the outputs being spent in the transaction
 
-These are the current default values in the bsv library involved on these checks:
+These are the current default values in the tbc library involved on these checks:
 - `Transaction.FEE_PER_KB`: `10000` (satoshis per kilobyte)
 - `Transaction.FEE_SECURITY_MARGIN`: `15`
 - `Transaction.DUST_AMOUNT`: `546` (satoshis)
@@ -161,7 +161,7 @@ Internally, a `_changeIndex` property stores the index of the change output (so 
 ## Time-Locking transaction
 All bitcoin transactions contain a locktime field. The locktime indicates the earliest time a transaction can be added to the blockchain. Locktime allows signers to create time-locked transactions which will only become valid in the future, giving the signers a chance to change their minds. Locktime can be set in the form of a bitcoin block height (the transaction can only be included in a block with a higher height than specified) or a linux timestamp (transaction can only be confirmed after that time). For more information see [bitcoin's development guide section on locktime](https://bitcoin.org/en/developer-guide#locktime-and-sequence-number).
 
-In bsv, you can set a `Transaction`'s locktime by using the methods `Transaction#lockUntilDate` and `Transaction#lockUntilBlockHeight`. You can also get a friendly version of the locktime field via `Transaction#getLockTime`;
+In tbc, you can set a `Transaction`'s locktime by using the methods `Transaction#lockUntilDate` and `Transaction#lockUntilBlockHeight`. You can also get a friendly version of the locktime field via `Transaction#getLockTime`;
 
 For example:
 

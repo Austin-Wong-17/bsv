@@ -3,12 +3,12 @@
 require('chai').should()
 var expect = require('chai').expect
 
-var bsv = require('../..')
-var Transaction = bsv.Transaction
-var TransactionSignature = bsv.Transaction.Signature
-var Script = bsv.Script
-var PrivateKey = bsv.PrivateKey
-var errors = bsv.errors
+var tbc = require('../..')
+var Transaction = tbc.Transaction
+var TransactionSignature = tbc.Transaction.Signature
+var Script = tbc.Script
+var PrivateKey = tbc.PrivateKey
+var errors = tbc.errors
 
 describe('TransactionSignature', function () {
   var fromAddress = 'mszYqVnqKoQx4jcTdJXxwKAissE3Jbrrc1'

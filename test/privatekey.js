@@ -4,12 +4,12 @@ var chai = require('chai')
 var should = chai.should()
 var expect = chai.expect
 
-var bsv = require('..')
-var BN = bsv.crypto.BN
-var Point = bsv.crypto.Point
-var PrivateKey = bsv.PrivateKey
-var Networks = bsv.Networks
-var Base58Check = bsv.encoding.Base58Check
+var tbc = require('..')
+var BN = tbc.crypto.BN
+var Point = tbc.crypto.Point
+var PrivateKey = tbc.PrivateKey
+var Networks = tbc.Networks
+var Base58Check = tbc.encoding.Base58Check
 
 var validbase58 = require('./data/bitcoind/base58_keys_valid.json')
 var invalidbase58 = require('./data/bitcoind/base58_keys_invalid.json')
